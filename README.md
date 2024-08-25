@@ -34,10 +34,10 @@ Après avoir installé Node.js, suivez les instructions ci-dessous pour installe
 
     Clonez le dépôt si ce n'est pas déjà fait :
 
-    ```bash
-        git clone https://github.com/Masnssen/QuickHomeServices.git
-        cd <nom-du-repository>
-    ```
+```bash
+    git clone https://github.com/Masnssen/QuickHomeServices.git
+    cd <nom-du-repository>
+```
 
 Installez les dépendances :
 
