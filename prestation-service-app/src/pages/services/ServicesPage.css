@@ -1,0 +1,88 @@
+/* ServicesPage.css */
+
+.services-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .services-container {
+    flex: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .services-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  .service-card h3 {
+    margin-top: 0;
+  }
+  
+  .booking-form {
+    margin-top: 40px;
+  }
+  
+  .booking-form h3 {
+    margin-bottom: 20px;
+  }
+  
+  .booking-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booking-form label {
+    margin-bottom: 10px;
+  }
+  
+  .booking-form input,
+  .booking-form select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .booking-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .booking-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .hours-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .hour-checkbox {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hour-checkbox input {
+    margin-right: 5px;
+  }
+  

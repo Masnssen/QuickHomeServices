@@ -1,0 +1,228 @@
+/* Style global pour la page d'accueil */
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .homepage-main {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .homepage-introduction {
+    margin-bottom: 2.5rem;
+  }
+  
+  .homepage-introduction h2 {
+    font-size: 2rem;
+    color: #007bff;
+  }
+  
+  .homepage-introduction p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .homepage-buttons {
+    margin-top: 1.5rem;
+  }
+  
+  .homepage-buttons .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s;
+  }
+  
+  .homepage-buttons .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .homepage-professionals {
+    background-color: #f8f9fa;
+    padding: 2rem;
+  }
+  
+  .homepage-professionals h3 {
+    margin-bottom: 1.5rem;
+    color: #007bff;
+  }
+  
+  .professional-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .professional-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.1);
+    margin: 0.5rem;
+    width: 20rem;
+    text-align: center;
+  }
+  
+  .homepage-testimonials {
+    padding: 2rem;
+    background-color: #e9ecef;
+  }
+  
+  .homepage-testimonials h3 {
+    margin-bottom: 1.5rem;
+    color: #007bff;
+  }
+  
+  .testimonial {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.1);
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  .testimonial footer {
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+  
+  .homepage-services {
+    padding: 2rem;
+  }
+  
+  .homepage-services h3 {
+    margin-bottom: 1.5rem;
+    color: #007bff;
+  }
+  
+  .homepage-services ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .homepage-services li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .homepage-footer {
+    background-color: #007bff;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .homepage-footer section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .homepage-footer h4 {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    color: #e9ecef;
+  }
+  
+  .homepage-footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .homepage-footer li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .homepage-footer a {
+    color: #e9ecef;
+    text-decoration: none;
+  }
+  
+  .homepage-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 37.5rem; /* Environ 600px */
+    margin: 0 auto;
+  }
+  
+  .contact-form label {
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.3rem;
+  }
+  
+  .contact-form button {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media Queries pour les petits écrans */
+  @media (max-width: 48rem) { /* Environ 768px */
+    .homepage-introduction h2 {
+      font-size: 1.8rem;
+    }
+  
+    .homepage-introduction p {
+      font-size: 0.9rem;
+    }
+  
+    .homepage-buttons .btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  
+    .professional-card {
+      width: 100%;
+      max-width: 25rem; /* Environ 400px */
+    }
+  
+    .homepage-footer {
+      flex-direction: column;
+    }
+  
+    .homepage-footer section {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  
+    .homepage-footer h4 {
+      font-size: 1rem;
+    }
+  }
+  
