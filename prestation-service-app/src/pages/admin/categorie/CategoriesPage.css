@@ -1,0 +1,138 @@
+/* Styles pour la page des catégories */
+.categories-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Formulaire de création de catégorie */
+.create-category-form {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.create-category-form h2 {
+  margin-top: 0;
+}
+
+.create-category-form input,
+.create-category-form textarea {
+  display: block;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: calc(100% - 20px);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.create-category-form button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.create-category-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Formulaire de modification de catégorie */
+.edit-category-form {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.edit-category-form h2 {
+  margin-top: 0;
+}
+
+.edit-category-form input,
+.edit-category-form textarea {
+  display: block;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: calc(100% - 20px);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-category-form button {
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.edit-category-form button:hover {
+  background-color: #218838;
+}
+
+.edit-category-form button.cancel {
+  background-color: #dc3545;
+}
+
+.edit-category-form button.cancel:hover {
+  background-color: #c82333;
+}
+
+/* Styles pour le tableau des catégories */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+table td {
+  vertical-align: top;
+}
+
+/* Styles des boutons dans le tableau */
+table button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white; /* Assure que le texte des boutons est lisible */
+  background-color:#28a745;
+}
+
+table button.edit {
+  background-color: #007bff;
+}
+
+table button.edit:hover {
+  background-color: #0056b3;
+}
+
+table button.delete {
+  background-color: #dc3545;
+}
+
+table button.delete-button:hover {
+  background-color: #c82333;
+}

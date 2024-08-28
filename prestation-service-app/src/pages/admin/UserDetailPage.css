@@ -1,0 +1,43 @@
+.user-detail-page {
+  padding: 20px;
+}
+
+.user-detail-page h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.user-detail-page form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.user-detail-page label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.user-detail-page input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.user-detail-page button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.user-detail-page button:disabled {
+  background-color: #ccc;
+}
+
+.user-detail-page p {
+  color: red;
+  font-weight: bold;
+}

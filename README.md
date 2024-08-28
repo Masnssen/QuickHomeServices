@@ -50,3 +50,23 @@ Démarrez l'application :
 ```bash
 npm start
 ```
+
+
+## Installation du serveur sur un environement virtuel
+### Créez un environnement virtuel
+sudo apt install python3.10-venv
+python3 -m venv venv
+
+### Activez l'environnement virtuel
+#### Sur Windows :
+venv\Scripts\activate
+#### Sur macOS/Linux :
+source venv/bin/activate
+
+### Installez Flask et les autres dépendances
+pip install Flask flask-mysqldb flask-bcrypt flask-jwt-extended
+pip install flask-cors
+
+
+## Ya deux sous dossier le premier c'est le back-end y'aura un readme file pour les étapes a suivre pour l'installation et 
+## Et le deuxième le front-end en React y'aura aussi un readme file pour les étapes d'installation. 

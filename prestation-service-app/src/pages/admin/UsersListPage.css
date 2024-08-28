@@ -1,0 +1,43 @@
+.user-list-page {
+    padding: 20px;
+  }
+  
+  .user-list-page h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .user-list-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .user-list-page th, .user-list-page td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .user-list-page th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .user-list-page tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .user-list-page tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .view-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .view-link:hover {
+    text-decoration: underline;
+  }
+  

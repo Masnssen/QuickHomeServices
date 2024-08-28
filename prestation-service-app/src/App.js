@@ -5,6 +5,10 @@ import SignUpPage from './pages/account/SignUpPage';
 import LoginPage from './pages/account/LoginPage';
 import ServicesPage from './pages/services/ServicesPage';
 import CartPage from './pages/cart/CartPage';
+import UserDetailPage from './pages/admin/UserDetailPage';
+import UsersListPage from './pages/admin/UsersListPage';
+import CategoriesPage from './pages/admin/categorie/CategoriesPage'
+import SubCategoriesPage from './pages/admin/categorie/SubCategoriesPage'
 // Autres imports de pages...
 
 function App() {
@@ -16,6 +20,12 @@ function App() {
         <Route path="/login" element={<LoginPage/>} />
         <Route path="/services" element={<ServicesPage/>} />
         <Route path="/cart" element={<CartPage/>} />
+        
+        <Route path="/admin_users" element={<UsersListPage/>} />
+        <Route path="/admin/users/:userId" element={<UserDetailPage/>} />
+        
+        <Route path="/admin/categories" element={<CategoriesPage/>} />
+        <Route path="/admin/categories/:categoryId/sous-categories" element={<SubCategoriesPage />} />
         {/* Autres routes... */}
       </Routes>
     </Router>
