@@ -71,6 +71,10 @@ def create_category():
 
     return create_categorie_prestation(mysql, data['titre'], data['description'])
 
+@app.route('/categories/<int:category_id>', methods=['GET'])
+def get_category(category_id):
+    return get_category_by_id(mysql, category_id)
+
 @app.route('/categories/<int:categorie_id>', methods=['POST'])
 def update_category(categorie_id):
     data = request.get_json()
@@ -129,27 +133,7 @@ def delete_sous_category(sous_categorie_id):
 # Routes de gestion des prestations
 @app.route('/prestations', methods=['POST'])
 def create_prestation_route():
-    data = request.get_json()
-
-    if "categorie" not in data or not isinstance(data['categorie'], int):
-        return jsonify(message="Erreur : 'categorie' est requis et doit être un entier."), 400
-
-    if "sous_categorie" not in data or not isinstance(data['sous_categorie'], int):
-        return jsonify(message="Erreur : 'sous_categorie' est requis et doit être un entier."), 400
-
-    if "prix_unitaire" not in data or not isinstance(data['prix_unitaire'], (int, float)):
-        return jsonify(message="Erreur : 'prix_unitaire' est requis et doit être un nombre."), 400
-
-    if "unite" not in data or not isinstance(data['unite'], int):
-        return jsonify(message="Erreur : 'unite' est requis et doit être un entier."), 400
-
-    if "prix_total" not in data or not isinstance(data['prix_total'], (int, float)):
-        return jsonify(message="Erreur : 'prix_total' est requis et doit être un nombre."), 400
-
-    if "client_email" not in data or not data['client_email'].strip():
-        return jsonify(message="Erreur : 'client_email' est requis."), 400
-
-    return create_prestation(mysql, data['categorie'], data['sous_categorie'], data['prix_unitaire'], data['unite'], data['prix_total'], data['client_email'])
+    return create_prestation(mysql)
 
 @app.route('/prestations/<int:prestation_id>', methods=['POST'])
 def update_prestation_route(prestation_id):

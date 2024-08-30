@@ -1,17 +1,47 @@
 from flask import jsonify
 
-def create_prestation(mysql, categorie, sous_categorie, prix_unitaire, unite, prix_total, client_email):
+from flask import jsonify, request
+from datetime import datetime
+
+def create_prestation(mysql):
     cur = mysql.connection.cursor()
     try:
-        insert_query = """
-        INSERT INTO prestation (categorie, sous_categorie, prix_unitaire, unite, prix_total, client_email, etat) 
-        VALUES (%s, %s, %s, %s, %s, %s, 'dans_panier')
+        # Extraire les données du corps de la requête
+        data = request.json
+        categorie = data.get('categorie')
+        sous_categorie = data.get('sous_categorie')
+        prix_unitaire = data.get('prix_unitaire')
+        unite = data.get('unite')
+        prix_total = data.get('prix_total')
+        client_email = data.get('client_email')
+        etat = data.get('etat')
+        heures_disponibles = data.get('heures_disponibles')  # Liste d'objets avec date et heures disponibles
+    
+        # Insertion dans la table `prestation`
+        insert_prestation_query = """
+        INSERT INTO prestation (categorie, sous_categorie, prix_unitaire, unite, prix_total, client_email, etat)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
         """
-        cur.execute(insert_query, (categorie, sous_categorie, prix_unitaire, unite, prix_total, client_email))
+        cur.execute(insert_prestation_query, (categorie, sous_categorie, prix_unitaire, unite, prix_total, client_email, etat))
+        prestation_id = cur.lastrowid
+
+        # Insertion dans la table `prestation_dates` pour chaque date et heure disponible
+        insert_prestation_dates_query = """
+        INSERT INTO prestation_dates (prestation_id, date_debut)
+        VALUES (%s, %s)
+        """
+        for date_heure in heures_disponibles:
+            date_heure_formatee = datetime.strptime(date_heure, '%Y-%m-%dT%H:%M:%S')  # Format de la date
+            cur.execute(insert_prestation_dates_query, (prestation_id, date_heure_formatee))
+
+        # Commit des transactions
         mysql.connection.commit()
-        return jsonify(message="Prestation créée avec succès!"), 201
+
+        return jsonify(message="Réservation créée avec succès.", prestation_id=prestation_id), 201
+
     except Exception as e:
-        return jsonify(message="Erreur lors de la création de la prestation.", error=str(e)), 500
+        mysql.connection.rollback()
+        return jsonify(message="Erreur lors de la création de la réservation.", error=str(e)), 500
     finally:
         cur.close()
 

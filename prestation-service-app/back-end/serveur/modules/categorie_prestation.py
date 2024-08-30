@@ -84,3 +84,27 @@ def get_all_categories_prestation(mysql):
         return jsonify(message="Erreur lors de la récupération des catégories de prestation.", error=str(e)), 500
     finally:
         cur.close()
+
+def get_category_by_id(mysql, category_id):
+    cur = mysql.connection.cursor()
+    try:
+        # Préparer la requête SQL pour obtenir les détails de la catégorie par ID
+        select_query = "SELECT id, titre, description FROM categorie_prestation WHERE id = %s"
+        cur.execute(select_query, (category_id,))
+        category = cur.fetchone()
+
+        # Vérifier si une catégorie a été trouvée
+        if category:
+            category_details = {
+                'id': category[0],
+                'titre': category[1],
+                'description': category[2]
+            }
+            return jsonify(category=category_details), 200
+        else:
+            return jsonify(message="Catégorie non trouvée."), 404
+
+    except Exception as e:
+        return jsonify(message="Erreur lors de la récupération des détails de la catégorie.", error=str(e)), 500
+    finally:
+        cur.close()

@@ -24,14 +24,48 @@
 
 .navbar-menu li {
   margin: 0;
+  position: relative; /* Ajouté pour permettre le positionnement absolu du dropdown */
 }
 
 .navbar-menu a {
   color: white;
   text-decoration: none;
   font-size: 1rem;
+  padding: 10px; /* Ajout pour plus d'espace cliquable */
+  display: block; /* Assure que tout le lien est cliquable */
 }
 
 .navbar-menu a:hover {
   text-decoration: underline;
+}
+
+/* Ajout du style pour le menu déroulant */
+.navbar-menu li:hover > .dropdown-menu {
+  display: block; /* Affiche le menu déroulant au survol */
+}
+
+.dropdown-menu {
+  display: none; /* Caché par défaut */
+  position: absolute;
+  top: 100%; /* Place le menu juste en dessous du parent */
+  left: 0;
+  background-color: #007bff; /* Même couleur que la barre de navigation */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optionnel : ajoute une ombre pour démarquer le menu */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 200px;
+  z-index: 1000; /* Assure que le menu est au-dessus des autres éléments */
+}
+
+.dropdown-menu li a {
+  color: white; /* Conserve la couleur des liens */
+  padding: 10px; /* Ajoute du padding à chaque lien du menu */
+  text-decoration: none;
+  display: block; /* Assure que tout le lien est cliquable */
+}
+
+.dropdown-menu li a:hover {
+  background-color: #0056b3; /* Change la couleur de fond au survol */
+  text-decoration: none; /* Enlève la soulignure pour les liens du dropdown */
 }
