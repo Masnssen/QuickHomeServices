@@ -54,3 +54,21 @@ CREATE TABLE IF NOT EXISTS prestation (
     FOREIGN KEY (sous_categorie) REFERENCES sous_categorie_prestation(id),
     FOREIGN KEY (id_commande) REFERENCES commande(id)
 );
+
+CREATE TABLE IF NOT EXISTS prestation_dates (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    prestation_id INT,
+    date_debut DATETIME,
+    FOREIGN KEY (prestation_id) REFERENCES prestation(id)
+);
+
+
+CREATE TABLE IF NOT EXISTS auto_entrepreneur_applications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    prestation_date_id INT,
+    auto_entrepreneur_email VARCHAR(255),
+    status ENUM('en_attente', 'selectionne', 'rejeté') DEFAULT 'en_attente',
+    date_candidature DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (prestation_date_id) REFERENCES prestation_dates(id)
+);
+

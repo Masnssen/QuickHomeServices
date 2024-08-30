@@ -38,37 +38,37 @@ function HomePage() {
         <section className="footer-about">
           <h4>À propos</h4>
           <ul>
-            <li><a href="#">Plateforme responsable</a></li>
-            <li><a href="#">Avis sur QuickHomeServices</a></li>
-            <li><a href="#">Code promos</a></li>
-            <li><a href="#">Le Mag' QuickHomeServices</a></li>
+            <li><a href="/">Plateforme responsable</a></li>
+            <li><a href="/">Avis sur QuickHomeServices</a></li>
+            <li><a href="/">Code promos</a></li>
+            <li><a href="/">Le Mag' QuickHomeServices</a></li>
           </ul>
         </section>
         <section className="footer-pros">
           <h4>Pour les Pros</h4>
           <ul>
-            <li><a href="#">Devenir Pro QuickHomeServices</a></li>
-            <li><a href="#">Devenir aide ménagère</a></li>
-            <li><a href="#">Devenir nounou</a></li>
-            <li><a href="#">Devenir coiffeur</a></li>
-            <li><a href="#">Devenir esthéticienne</a></li>
-            <li><a href="#">Devenir masseur</a></li>
-            <li><a href="#">Devenir coach sportif</a></li>
+            <li><a href="/">Devenir Pro QuickHomeServices</a></li>
+            <li><a href="/">Devenir aide ménagère</a></li>
+            <li><a href="/">Devenir nounou</a></li>
+            <li><a href="/">Devenir coiffeur</a></li>
+            <li><a href="/">Devenir esthéticienne</a></li>
+            <li><a href="/">Devenir masseur</a></li>
+            <li><a href="/">Devenir coach sportif</a></li>
           </ul>
         </section>
         <section className="footer-contact">
           <h4>Contact</h4>
           <ul>
-            <li><a href="#">Nous contacter</a></li>
-            <li><a href="#">Nous rejoindre</a></li>
-            <li><a href="#">On recrute !</a></li>
+            <li><a href="/">Nous contacter</a></li>
+            <li><a href="/">Nous rejoindre</a></li>
+            <li><a href="/">On recrute !</a></li>
           </ul>
         </section>
         <section className="footer-help">
           <h4>Besoin d'aide ?</h4>
           <ul>
-            <li><a href="#">FAQ / Centre d'aide</a></li>
-            <li><a href="#">Démarrer un chat</a></li>
+            <li><a href="/">FAQ / Centre d'aide</a></li>
+            <li><a href="/">Démarrer un chat</a></li>
           </ul>
         </section>
         <p>&copy; 2024 QuickHomeServices. Tous droits réservés.</p>

@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, send_from_directory
 from modules.authentification import init_mysql, register, bcrypt, login
 from modules.mysql_db import get_db_config
 from flask_cors import CORS  # Importer CORS
@@ -28,6 +28,8 @@ mysql = init_mysql(app)
 
 app.config['JWT_SECRET_KEY'] = "tRXN9vGGA2DDg1jnGeuxeuUDKoRhTSsX/8az9vHpuNQ="
 jwt = JWTManager(app)
+
+
 # Routes
 @app.route('/register', methods=['POST'])
 def register_route():
